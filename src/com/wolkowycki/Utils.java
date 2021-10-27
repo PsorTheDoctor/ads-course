@@ -7,16 +7,31 @@ import java.util.Set;
 
 class Utils {
 
-    static List<Point> convertToPointList(int[][] input) {
+    static List<Point> arrayToPointList(int[][] array) {
 
-        int n = input.length;
         List<Point> points = new LinkedList<>();
 
-        for (int i = 0; i < n; i++) {
-            Point point = new Point(input[i][0], input[i][1]);
+        for (int i = 0; i < array.length; i++) {
+            Point point = new Point(array[i][0], array[i][1]);
             points.add(point);
         }
         return points;
+    }
+
+    static Set<Set<Point>> arrayToNestedPointSet(int[][][] array) {
+
+        Set<Set<Point>> quadruples = new HashSet<>();
+
+        for (int i = 0; i < array.length; i++) {
+            Set<Point> points = new HashSet<>();
+
+            for (int j = 0; j < array[0].length; j++) {
+                Point point = new Point(array[i][j][0], array[i][j][1]);
+                points.add(point);
+            }
+            quadruples.add(points);
+        }
+        return quadruples;
     }
 
     static Set<Set<Point>> findCollinear(List<Point> points) {
@@ -89,7 +104,7 @@ class Utils {
                 sb.append("\n");
             }
         } else {
-            sb.append("{}");
+            sb.append("{}\n");
         }
         System.out.println(sb);
     }
