@@ -1,7 +1,7 @@
 package com.wolkowycki;
 
-import java.util.List;
 import java.util.Set;
+import java.util.Vector;
 
 class Tests {
 
@@ -17,22 +17,22 @@ class Tests {
 
     static void test() {
 
-        List<Point> points = Utils.arrayToPointList(input1);
+        Vector<Point> points = Utils.arrayToPointVector(input1);
         Set<Set<Point>> result = Utils.findCollinear(points);
         Set<Set<Point>> output = Utils.arrayToNestedPointSet(output1);
         print(result, output);
 
-        points = Utils.arrayToPointList(input2);
+        points = Utils.arrayToPointVector(input2);
         result = Utils.findCollinear(points);
         output = Utils.arrayToNestedPointSet(output2);
         print(result, output);
 
-        points = Utils.arrayToPointList(input3);
+        points = Utils.arrayToPointVector(input3);
         result = Utils.findCollinear(points);
         output = Utils.arrayToNestedPointSet(output3);
         print(result, output);
 
-        points = Utils.arrayToPointList(input4);
+        points = Utils.arrayToPointVector(input4);
         result = Utils.findCollinear(points);
         output = Utils.arrayToNestedPointSet(output4);
         print(result, output);
@@ -42,7 +42,7 @@ class Tests {
 
         System.out.print("Result: ");
         Utils.print(result);
-        System.out.print("Output: ");
+        System.out.print("Correct: ");
         Utils.print(output);
     }
 }
