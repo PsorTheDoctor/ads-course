@@ -1,4 +1,4 @@
-package com.wolkowycki;
+package com.wolkowycki.portfolio1;
 
 import java.util.Set;
 import java.util.Vector;

@@ -1,4 +1,4 @@
-package com.wolkowycki;
+package com.wolkowycki.portfolio1;
 
 import javafx.util.Pair;
 
