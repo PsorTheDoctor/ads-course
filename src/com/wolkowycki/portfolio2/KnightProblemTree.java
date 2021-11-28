@@ -9,7 +9,7 @@
  *
  * To see how it works please run a KnightProblemTree.java file.
  */
-package com.company;
+package com.wolkowycki.portfolio2;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
