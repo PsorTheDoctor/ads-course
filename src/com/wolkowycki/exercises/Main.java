@@ -1,6 +1,7 @@
 package com.wolkowycki.exercises;
 
 import java.util.Comparator;
+import java.util.Stack;
 import java.util.Vector;
 
 public class Main {
@@ -40,6 +41,23 @@ public class Main {
             }
         }
         return false;
+    }
+
+    // Returns true if the brackets in the parameter are balanced
+    static boolean balPar(String text) {
+
+        Stack<Character> stack = new Stack<>();
+
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+
+            if (stack.isEmpty() || stack.peek() == c) {
+                stack.push(c);
+            } else {
+                stack.pop();
+            }
+        }
+        return stack.isEmpty();
     }
 
     // A table holds n sorted numbers.
@@ -99,6 +117,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
+
+        System.out.println(balPar("((()())())"));
 
         int[] a = {0, 1, 2, 3, 4};
         System.out.println(contains(a, 7));
