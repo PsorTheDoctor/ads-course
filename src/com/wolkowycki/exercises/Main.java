@@ -45,6 +45,7 @@ public class Main {
     // A table holds n sorted numbers.
     // The task is to determine if the table contains two numbers
     // whose sum is equal to the value of parameter x.
+    // We assume an array is sorted ascending!
     static boolean contains(int[] array, int x) {
 
         int n = array.length;
