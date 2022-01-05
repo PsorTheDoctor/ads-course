@@ -3,17 +3,17 @@ package com.wolkowycki.hashing;
 class Main {
     public static void main(String[] args) {
 
-        // Separate chaining
-        HashTable<String, Integer> table = new HashTable<>();
-        table.add("this", 1);
-        table.add("coder", 2);
-        table.add("this", 4);
-        table.add("hi", 5);
+        LinearProbing<Integer, Integer> lp = new LinearProbing<>();
 
-        System.out.println(table.size());
-        System.out.println(table.remove("this"));
-        System.out.println(table.remove("this"));
-        System.out.println(table.size());
-        System.out.println(table.isEmpty());
+        lp.insert(1, 1);
+        lp.insert(2, 2);
+        lp.insert(2, 3);
+        lp.display();
+
+        System.out.println(lp.size());
+        System.out.println(lp.delete(2));
+        System.out.println(lp.size());
+        System.out.println(lp.isEmpty());
+        System.out.println(lp.get(2));
     }
 }

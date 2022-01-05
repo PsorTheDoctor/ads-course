@@ -4,20 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-class HashTable<K, V> {
+class SeparateChaining<K, V> {
 
     private List<HashNode<K, V>> bucketArray;
     private int numBuckets;
     private int size;
 
-    HashTable() {
+    SeparateChaining() {
         bucketArray = new ArrayList<>();
         numBuckets = 10;
         size = 0;
 
-        for (int i = 0; i < numBuckets; i++) {
+        for (int i = 0; i < numBuckets; i++)
             bucketArray.add(null);
-        }
     }
 
     int size() { return size; }

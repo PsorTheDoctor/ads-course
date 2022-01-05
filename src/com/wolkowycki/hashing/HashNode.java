@@ -4,9 +4,14 @@ package com.wolkowycki.hashing;
 class HashNode<K, V> {
     K key;
     V value;
-    final int hashCode;
+    int hashCode;
 
     HashNode<K, V> next;
+
+    HashNode(K key, V value) {
+        this.key = key;
+        this.value = value;
+    }
 
     HashNode(K key, V value, int hashCode) {
         this.key = key;
