@@ -21,7 +21,7 @@ class SeparateChaining<K, V> {
 
     int size() { return size; }
 
-    boolean isEmpty() { return size() == 0; }
+    boolean isEmpty() { return size == 0; }
 
     int hashCode(K key) {
         return Objects.hashCode(key);
